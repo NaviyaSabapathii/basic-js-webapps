@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+    font-family: Verdana, sans-serif;
+    text-transform: capitalize;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4, #FFFFCC, #FFFF99, #FFFF66, #a1c4fd, #c2e9fb, #cfd9df);
+    background-size: 600% 600%;
+    height: 100%;
+    animation: backgroundMove 10s infinite linear;
+}
+
+@keyframes backgroundMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    height: 450px;
+    width: 330px;
+    background: rgb(198, 187, 167);
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .5);
+    padding: 10px;
+    overflow-y: auto;
+    position: relative;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+    to {
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    }
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4, #FFFFCC, #FFFF99, #FFFF66, #a1c4fd, #c2e9fb, #cfd9df);
+    background-clip: text;
+    color: transparent;
+}
+
+
+
+#input {
+    height: 50px;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background: #fff;
+    color: #666;
+    padding: 0 10px;
+    margin: 15px 0;
+    animation: pulse 2s infinite;
+}
+
+#input::placeholder {
+    color: #bbb;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+button {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    background: #333;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background: #555;
+    transform: translateY(-3px);
+}
+
+ul {
+    padding: 0;
+}
+
+ul li {
+    list-style: none;
+    background: none;
+    color: #333;
+    height: 40px;
+    margin: 10px 0;
+    padding: 10px 0;
+    border-bottom: 1px dotted #333;
+    position: relative;
+    transition: transform 0.3s;
+    background-color: #fff;
+    background-image: linear-gradient(45deg, #efefef 25%, rgba(239, 239, 239, 0) 25%, rgba(239, 239, 239, 0) 75%, #efefef 75%, #efefef), linear-gradient(45deg, #efefef 25%, rgba(239, 239, 239, 0) 25%, rgba(239, 239, 239, 0) 75%, #efefef 75%, #efefef);
+}
+
+ul li:hover {
+    transform: translateY(-5px);
+}
+
+ul .fa-check, .fa-trash {
+    position: absolute;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+ul .fa-check {
+    right: 40px;
+    color: green;
+}
+
+ul .fa-check:hover {
+    color: #00e6e6;
+}
+
+ul .fa-trash {
+    right: 15px;
+    color: #ff0033;
+}
+
+ul .fa-trash:hover {
+    color: #ff6666;
+}
+
+ul .checked {
+    background: none;
+    text-decoration: line-through;
+    transition: 0.2s;
+    border-bottom: 1px dotted lightgreen;
+}

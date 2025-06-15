@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href = "style.css">
+        <script src = "jquery.min.js" charset="utf-8"></script> 
+
+    </head>
+    <body>
+        
+        <div class = "container">
+            <center><h1>To-dos</h1></center>
+
+            <input type="text" id = "input" placeholder="Enter the tasks">
+            <ul></ul>
+        </div>
+    <script type = "text/javascript">
+        $(document).ready(function(){
+
+            $('#input').change(function(){
+               var input = $(this).val();
+               $('ul').append('<li>' + input + '<i class="fa fa-check"></i><i class="fa fa-trash"></i></li>');
+               $(this).val();
+            });
+            $('ul').on('click','.fa-trash',function(){
+                $(this).parent('li').fadeOut(200);
+            })
+            $('ul').on('click','.fa-check',function(){
+                $(this).parent('li').toggleClass('checked');
+            })
+        });
+    </script>
+    </body>
+    <footer>
+
+    </footer>
+</html>
