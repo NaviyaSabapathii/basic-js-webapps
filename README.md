@@ -11,3 +11,5 @@ Here contains
 #intersting connect 4 game
 ![4 pic-1](https://github.com/user-attachments/assets/f8282351-65fc-4df6-9cb8-57d536f35ed4)
 
+Developed By
+Naviya S.
